@@ -9,3 +9,11 @@ venv/
 
 # Test datasets
 data/
+
+polish_clips/
+
+samples/ 
+
+word_clips/
+words_out/
+
