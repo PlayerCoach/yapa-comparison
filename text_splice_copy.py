@@ -1,15 +1,15 @@
 import requests
-import json
 import os
 from pydub import AudioSegment
 import time
 
-AUDIO_PATH = "books_synthesized.wav"
-TRANSCRIPT = "Change doesn't happen all at once, it's slow, often invisible."
+# Config
+INPUT_DIR = "polish_clips"
+TRANSCRIPT_FILE = "transcripts.txt"
 OUTPUT_DIR = "words_out"
+TEMP_WAV_DIR = "temp_wavs"
 GENTLE_URL = "http://localhost:8765/transcriptions?async=false"
-
-MIN_WORD_DURATION = 0.25  # seconds, tweaked to reflect real short words
+MIN_WORD_DURATION = 0.5  # seconds
 
 
 def align(audio_path, transcript):
@@ -51,7 +51,13 @@ def merge_short_words(words):
                     }
                 )
                 i = j + 1
+            elif merged:
+                # No next word; merge with previous
+                merged[-1]["word"] += f" {word['word']}"
+                merged[-1]["end"] = word["end"]
+                i += 1
             else:
+                # No previous either, just add it
                 merged.append(
                     {"word": word["word"], "start": word["start"], "end": word["end"]}
                 )
@@ -70,21 +76,70 @@ def cut_audio_segments(audio_path, segments, output_dir):
         clip.export(os.path.join(output_dir, filename), format="wav")
 
 
+import subprocess
+
+
+# Your helper function
+def convert_to_wav(path, output_path):
+    cmd = [
+        "ffmpeg",
+        "-i",
+        path,
+        "-ac",
+        "1",
+        "-ar",
+        "24000",
+        "-sample_fmt",
+        "s16",
+        output_path,
+        "-y",
+    ]
+    subprocess.run(
+        cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+    )
+
+
 def main():
-    print("Aligning...")
-    result = align(AUDIO_PATH, TRANSCRIPT)
-    print("Merging short words...")
-    segments = merge_short_words(result["words"])
-    print(f"Saving {len(segments)} segments...")
-    cut_audio_segments(AUDIO_PATH, segments, OUTPUT_DIR)
-    print("Done.")
+    start = time.time()
+
+    transcripts = {}
+    with open(TRANSCRIPT_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            if "\t" in line:
+                filename, transcript = line.strip().split("\t", 1)
+                transcripts[filename] = transcript
+
+    os.makedirs(TEMP_WAV_DIR, exist_ok=True)
+
+    for mp3_file in sorted(transcripts):
+        if mp3_file != "common_voice_en_27608626.mp3":
+            continue
+        transcript = transcripts[mp3_file]
+        mp3_path = os.path.join(INPUT_DIR, mp3_file)
+
+        if not os.path.exists(mp3_path):
+
+            print(f"⚠️ File not found: {mp3_file}")
+            continue
+
+        base = os.path.splitext(mp3_file)[0]
+        wav_path = os.path.join(TEMP_WAV_DIR, base + ".wav")
+        output_subdir = os.path.join(OUTPUT_DIR, base)
+
+        print(f"🎧 Converting {mp3_file} to WAV...")
+        try:
+            convert_to_wav(mp3_path, wav_path)
+
+            result = align(wav_path, transcript)
+
+            segments = merge_short_words(result["words"])
+            cut_audio_segments(wav_path, segments, output_subdir)
+
+        except Exception as e:
+            print(f"❌ Failed to process {mp3_file}: {e}\n")
+
+    print(f"\n🕒 Done. Total time: {time.time() - start:.2f} seconds")
 
 
 if __name__ == "__main__":
-    start = time.time()
     main()
-    end = time.time()
-    print(f"Total time: {end - start:.2f} seconds")
-
-
-# TODO Przemnoz czas trwaniua przez to ile spowolnilem
