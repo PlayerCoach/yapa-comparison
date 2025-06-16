@@ -19,3 +19,14 @@ words_out/
 
 temp_wavs/
 
+processed_audio/
+
+results/
+
+logs/
+
+american_clips/
+
+english_clips/
+
+spectograms/

@@ -1,0 +1,772 @@
+"Cretan_Accent": 4
+2nd Language: 30
+2nd language, South African (first language Afrikaans): 13
+A Savage Texas Gentleman: 20
+A bit country, not too far southern of a dialect, with obvious manners: 1
+A mix - A Thai native, non-native English speaker, initially educated under British system in Thailand then later educated in the US: 6
+A variety of Texan English with some German influence that has undergone the cot-caught merger: 13
+A'lo: 4
+African Accent: 9
+African-America: 3
+Afrikaans English: 7
+Alabama black American: 2
+Algeria,Algerian: 1
+American English with Swedish accent: 1
+American South East Georgia Dialect: 26
+Arabic English: 2
+Argentina: 1
+Argentine English: 2
+Argentinian English: 3
+Australian English: 55042
+Australian English,Canadian English: 8
+Australian English,East Africa (Uganda): 1
+Australian English,Educated Australian Accent: 21
+Australian English,England English: 20
+Australian English,England English,India and South Asia (India, Pakistan, Sri Lanka): 4
+Australian English,England English,Japanese: 20
+Australian English,England English,New Zealand English: 23
+Australian English,General Australian: 19
+Australian English,Hong Kong English: 4
+Australian English,Hybrid United States and Australian: 2
+Australian English,New Zealand English: 3
+Australian English,Russian,Ukrainian: 4
+Australian English,Sydney - middle eastern seaboard Australian: 13
+Australian English,teenager: 2
+Austrian: 145
+Azerbaijani: 1
+Balkan: 1
+Bangladeshi: 11
+Bangladeshi English: 115
+Bangladeshi,Bangladesh English: 7
+Bengali English: 1
+Blurpy: 3
+Born and raised in Greece. English is a second language. I was taught British English but I think my accent has shifted to American English.: 3
+Born in West Germany in 1966, lived in Toronto, Ontario from 1985 to 2004, now in Central America.: 22
+Brazilian: 22
+Brazilian Accent: 1
+Brazilian Accent,slight british accent: 1
+Brazilian,Latino: 3
+Brazillian: 2
+Brazillian Accent: 13
+British: 4
+British Americanized english: 2
+British English: 1
+British English / Received Pronunciation (RP): 53
+British English,Chinese English: 1
+British English,London English: 1
+British accent: 40
+British with slightly Brazilian accent,British and slightly Brazilian: 2
+Brooklyn: 3
+Bruneian English: 1
+Bulgarian: 105
+California: 18
+Californian Accent: 1
+Canadian English: 75471
+Canadian English,English Hungarian: 1
+Canadian English,Filipino: 16
+Canadian English,French: 7
+Canadian English,French Canadian: 3
+Canadian English,German English: 23
+Canadian English,India and South Asia (India, Pakistan, Sri Lanka): 24
+Canadian English,Irish English: 18
+Canadian English,Kenyan English: 4
+Canadian English,Lisp: 20
+Canadian English,Ontario: 136
+Canadian English,Pacific Northwest English: 5
+Canadian English,SerpentX: 5
+Canadian English,Swedish English: 11
+Canadian English,Toronto English: 5
+Canadian English,Welsh English: 2
+Canadian English,Western Canada: 5
+Canadian English,latin American person: 1
+Canadian Latino immigrant: 1
+Caribbean Canadian: 18
+Catalan: 1
+Central Midwestern United States with a Southern US Influence: 2
+Central Scottish: 3
+Chichester: 3
+Chinese: 15
+Chinese English: 26
+Chinese accent of English: 1
+Chinese-Australian English: 1
+Chinglish: 1
+Colombian Accent: 6
+Colombian living in Brazil for 20 years: 1
+Connecticut/Western Massachusetts: 1
+Croatian English: 51
+Czech: 6
+Czech accent: 9
+Danish English,Transatlantic: 7
+Danish/British/American blend: 4
+Deformato: 2
+Deutsch English: 2
+Domincian: 1
+Dutch: 166
+Dutch English: 182
+Dutch frysian accent: 1
+Dutch modern English: 3
+East African Khoja: 356
+East Asian: 4
+East Indian: 5
+East London: 5
+Eastern European: 8
+Eastern European English: 159
+Eastern European English,bulgarian english: 9
+Eastern European heavily influenced by the Greek clear pronounciation of vowels and consonants.: 4
+Egyptian: 5
+Egyptian English: 3
+England English: 154795
+England English with a touch of Canadian: 4
+England English, I speak like a typical South East England, in a soft South London accent.: 2
+England English, north yorkshire: 2
+England English,Academic southern English: 417
+England English,Bedford English,Cambridge English: 4
+England English,Black Country,west midlands: 2
+England English,British: 50
+England English,British English,Manchester,Mancunian, Speech Impediment: 3
+England English,British Indian: 2
+England English,British,South England: 3
+England English,Canadian English: 246
+England English,Dutch: 3
+England English,Dutch English: 2
+England English,East Anglian English: 20
+England English,East Anglian English,East Midlands English,Fenland English: 3
+England English,East Midland, United Kingdom: 3
+England English,East Midlands: 1
+England English,Eastury English: 2
+England English,Educated rural UK English: 1
+England English,Educated,non regional: 5
+England English,Esturine, from the region around the Thames Estuary in England: 3
+England English,Finnish: 4
+England English,German English: 78
+England English,Hong Kong English: 2
+England English,I speak like a typical South East England, South London accent: 3
+England English,I think I speak clearly with an accent that is easy to understand.: 1
+England English,India and South Asia (India, Pakistan, Sri Lanka): 103
+England English,India and South Asia (India, Pakistan, Sri Lanka),Essex: 3
+England English,India and South Asia (India, Pakistan, Sri Lanka),Nepalese: 35
+England English,India and South Asia (India, Pakistan, Sri Lanka),Southern African (South Africa, Zimbabwe, Namibia): 1
+England English,International Southern/London: 4
+England English,Irish English: 2
+England English,Israeli: 6
+England English,Italian: 3
+England English,Kent: 1
+England English,Lancashire, England: 15
+England English,Liverpool English,Lancashire English: 2628
+England English,London English: 7
+England English,London/Cockney Accent: 2
+England English,Luton,Dunstable: 6
+England English,Malaysian English: 49
+England English,Mancunion: 2
+England English,Midatlantic: 44
+England English,Middle-class London English accent with a very slight west-country twang: 5
+England English,Midlands English: 1
+England English,My accent in particular is regional - specifically Shropshire - identified in other parts of the UK as a West Midlands accent.: 4
+England English,New Zealand English: 2632
+England English,Nigerian English: 2
+England English,North of England,Lancashire,Mild scouse: 5
+England English,North-Western English after 40 years in Surrey: 5
+England English,Northern: 4
+England English,Northern England: 247
+England English,Northern English: 86
+England English,Northern English,yorkshire: 1
+England English,Norwegian: 22
+England English,Polish English: 3
+England English,Porto des dels 3 anys aprenent anglès a l'escola i actualment m'estic preparant per a l'examen del B2.: 5
+England English,RP: 1
+England English,Received English, tempered by 45 years living in the USA: 13
+England English,Received Pronunciation: 13
+England English,Received Pronunciation,London Accent: 4
+England English,Russian: 3
+England English,Scottish English: 42
+England English,Singaporean English: 25
+England English,Slightly lazy Midlands English ,Oxford English: 13
+England English,Sore throat,Masculine: 1
+England English,South London: 158
+England English,South London and Essex: 27
+England English,Souther English, long-term resident in Scotland: 3
+England English,Southern African (South Africa, Zimbabwe, Namibia): 44
+England English,Southern England: 15
+England English,Southern England English: 3
+England English,Southern England English with a subtle hint of Irish English.: 28
+England English,Spanglish: 2
+England English,Standard English: 3
+England English,Suburban London: 10
+England English,Surrey accent, Southern English.: 2
+England English,Swedish: 8
+England English,Very British: 9
+England English,Well spoken softly spoken Home Counties gay,gay male,softly spoken male,well spoken male: 283
+England English,Welsh English: 130
+England English,Western European non-native English: 1
+England English,Yorkshire English: 2
+England English,femalepublic school accent, quiet and under articualted finals: 36
+England English,geordie: 3
+England English,london,South England: 2
+England English,male,southern UK: 45
+England English,northern England like the game of throne.like the north wall: 1
+England English,south German / Swiss accent: 164
+England English,very subtle german/non native accent: 1
+England English,yorkshire: 123
+England West County: 75
+England non-native: 4
+English (Native Greek speaker): 4
+English (UK): 2
+English County Durham: 5
+English Cumbrian,English Northern: 5
+English Ghanaian: 2
+English Russia: 1
+English as second language (russian as first): 6
+English north of England: 9
+English with Swiss german accent: 5
+English with a French accent: 2
+European: 35
+European English: 26
+European English,French,Romanian: 4
+European accent: 6
+European,Dutch,Adjustable: 13
+European,German,Non-native,Foreign: 112
+European,eastern europe,pronounced r's,heavy consonants: 10
+Filipino: 6461
+Filipino English: 5
+Filipino,Bisaya: 5
+Filipino,Eastern European,ukrainian anglosax: 2
+Filipino,Waray-waray dialect: 10
+Finnish: 11
+Foreign,Finnish foreign accent: 3
+France English,Germany English: 3
+French: 135
+French Canadian: 3
+French speaking english: 2
+Generic European: 25
+Georgian English: 15
+German: 293
+German Accent: 35
+German Accent,Non-native: 10
+German English: 172
+German English,"denglish": 3
+German English,German native speaker: 4
+German English,I am German and speak English as learned at school: 8
+German English,Sick: 3
+German native: 2
+German,south-west German,South German accent,Alemannic German Accent: 74
+Ghanaian: 2
+Ghanaian english Accent,african regular reader: 17
+Greek: 12
+Haitian Creole: 5
+Hispanic: 29
+Hispanic/Latino: 5
+Hong Kong English: 4706
+Hong Kong English,Scottish English: 4
+Hong Kong English,Singaporean English: 1
+Hungarian: 20
+Hungarian English: 3
+Hunglish: 12
+Hybrid Indian/Australian/American: 1
+I am ,Kenyan influenced by British english: 4
+I am Spanish but I lived in France for 14 years which changed even my Spanish accent. So I have also a French language influence from: 1
+I have a London/Esssex UK accent.: 1
+I have a mild Brooklyn accent.: 4
+I have none that I can tell.: 2
+I speak as if I am there.: 2
+I was born in England and have lived in Australia, Canada and France.: 5
+Icelandic: 4
+India and South Asia (India, Pakistan, Sri Lanka): 109176
+India and South Asia (India, Pakistan, Sri Lanka),Bangladeshi English: 2
+India and South Asia (India, Pakistan, Sri Lanka),Basic: 5
+India and South Asia (India, Pakistan, Sri Lanka),Bengali English: 7
+India and South Asia (India, Pakistan, Sri Lanka),Calm and fluent: 1
+India and South Asia (India, Pakistan, Sri Lanka),I think mine accent is influenced by Indian Accent ,Yes Please.: 7
+India and South Asia (India, Pakistan, Sri Lanka),Indian English: 3
+India and South Asia (India, Pakistan, Sri Lanka),Indian with a tinge of an RP accent: 10
+India and South Asia (India, Pakistan, Sri Lanka),International Indian Accent: 46
+India and South Asia (India, Pakistan, Sri Lanka),Malaysian English: 1
+India and South Asia (India, Pakistan, Sri Lanka),Nepali: 1
+India and South Asia (India, Pakistan, Sri Lanka),Singaporean English: 110
+India and South Asia (India, Pakistan, Sri Lanka),South India,Kannadiga: 7
+India and South Asia (India, Pakistan, Sri Lanka),South Indian: 3
+India and South Asia (India, Pakistan, Sri Lanka),West Indies and Bermuda (Bahamas, Bermuda, Jamaica, Trinidad): 1
+India and South Asia (India, Pakistan, Sri Lanka),bangladesh: 29
+India and South Asia (India, Pakistan, Sri Lanka),indian: 1
+India and South Asia (India, Pakistan, Sri Lanka),try to maintain originality: 94
+Indian English: 1
+Indonesian: 57
+Indonesian English: 40
+Indonesian,indonesia: 3
+Irish English: 10387
+Irish English,English: 1
+Irish English,Northern Irish English,belfast: 17
+Israeli: 77
+Israeli English: 63
+Israeli accent: 4
+Israeli's accent: 2
+Israeli-USA-MIX: 1
+Israeli-russian-mixed english: 1
+Italian: 86
+Italian accent from Northern Italy (Milan): 1
+Italian,Sicilian: 3
+Italian/US-English: 1
+Japan English: 4
+Japanese English: 26
+Kazakhstan English: 48
+Kenyan: 15
+Kenyan ,East African: 14
+Kenyan English: 16
+Kenyan English accent: 47
+Kenyan accent: 3
+Kiwi: 19
+Korean: 3
+Korean American English: 1
+Korean American,Korean American English: 4
+L2: 3
+Lancashire: 1
+Latin American accent: 14
+Latin American accent influenced by American English: 6
+Latin English: 32
+Latinamerican: 3
+Latino: 20
+Latino English (Mexico): 1
+Latvian: 49
+Latvian English: 1
+Lebanese accent: 4
+Lithuanian,Non-native: 5
+Liverpudlian English: 9
+London, England: 3
+Malaysian English: 2326
+Malaysian English,Indonesian English: 10
+Malaysian English,Singaporean English: 20
+Manchester, English English, Mancunian, British English: 2
+Mandarin English: 1
+Mexican English: 2
+Mid Atlantic United States - Philadelphia Suburbs: 1
+Midatlantic: 6
+Midwestern: 2
+Mild Northern England English: 4
+Mix of american and british accent: 104
+Mixed accent: 2
+Mixed european: 1
+Nasal,Belgian: 1
+Native Lithuanian English Speaker: 1
+Nepalese: 2
+Nepali: 410
+Nepali English Male: 1
+Nepali,Nepali American,Nepali English: 1
+New Jerseyan: 32
+New York City: 5
+New Zealand English: 14309
+New Zealand English,I don't really speak english, just practicing: 2
+Nigerian: 5
+Nigerian ,West African: 10
+Nigerian English: 36
+Nigerian English,British,Nigerian: 1
+Non Native - French speaker: 3
+Non native: 2
+Non native English: 5
+Non native speaker from France: 4
+Non native speaker,German English: 52595
+Non-native: 4
+Non-native,Spanish,Foreign: 95
+North Africa: 2
+North African: 1
+North American southeastern dialect: 1
+North European English: 18
+North Wales 1st language Welsh English: 2
+Northern Africa Accent: 1
+Northern English: 2
+Northern English,yorkshire: 4
+Northern Irish: 10405
+Northern Irish English: 9
+Northern Irish, English: 16
+Northern Irish,Norwegian,yorkshire: 67
+Northern Irish,belfast: 7
+Northern Irish,culchie: 337
+Northumbrian British English: 171
+Norwegian: 7
+Not bad: 3
+Nottinghamshire,East Midlands: 4
+Of Afrikan Kenyan descent with some American influence: 1
+Perceived pronunciation English with no accent,None: 8
+Persian,Iranian: 2
+Personal idiolect: 10
+Polish English: 5
+Polish/Nordic English: 1
+Problema alla corte vocali: 1
+Queenslandish, lived with my grandfather for a time who has a mix between the australian and an english accent.: 1
+Raised in Ireland with English as my first language: 1
+Rhode Island New England Accent: 4
+Romanian,Eastern European: 45
+Russian: 76
+Russian Accent: 11
+Russian English: 10
+Russian,East Ukrainian: 6
+Russian,Eastern European: 2
+Russian,I don't know,Kazakh: 2
+Russian,Slavic: 67
+Russian,Slavic,Cyrilic: 2
+Russian,Slavic,Ukrainian: 5
+Scottish English: 18626
+Scottish English,Cowdengelly: 7
+Scottish English,Dundonian Scottish: 1
+Scottish English,Glaswegian: 16
+Scottish English,I have stayed in the Scottish Borders all my life.: 3
+Scottish English,Posh Scottish English: 1
+Scottish English,Renfrewshire. Scotland: 2
+Scottish English,Scottish: 5
+Scottish English,Scottish English (West Coast),Scottish English (Ayrshire): 14
+Scottish English,highland,east highland: 6
+Scottish English,spanish english: 3
+Second tongue: 3
+Singaporean English: 3593
+Singaporean English,Thai English: 1
+Slavic: 93
+Slavic English: 2
+Slavic,polish: 191
+Slavic,polish,East European: 110
+Slavic,polish,Foreign,Easter European: 18
+Slight spanish accent when speaking english: 1
+Slovak: 24
+So its a dialect of its own Mississippi and Bama based the southern twang gets deeper in the right setting and such a unique language is the best way to put it yall: 1
+South African  English accent: 29
+South African English: 21
+South African English Accent: 31
+South America: 2
+South Asia (Bangladesh): 1
+South Atlantic (Falkland Islands, Saint Helena): 203
+South Australia: 30
+South Dublin English,Dublin South English: 7
+South East England: 1
+South Indian: 161
+Southern African (South Africa, Zimbabwe, Namibia): 25409
+Southern African (South Africa, Zimbabwe, Namibia),Durban: 4
+Southern African (South Africa, Zimbabwe, Namibia),My accent is influenced by the phones of all letters within a sentence.: 261
+Southern African (South Africa, Zimbabwe, Namibia),South African accent: 943
+Southern African (South Africa, Zimbabwe, Namibia),Xhosa,male,black: 6
+Southern California, Los Angeles native for 30+ years with another 7 years spent living in the Rocky Mountains of Colorado. ,Southern-Californian: 1
+Southern Californian: 1
+Southern Texas Spanish American: 2
+Southern counties English: 1
+Southern drawl: 39
+Spanish: 3
+Spanish bilingual: 7
+Spanish influenced: 1
+Standard British English: 1
+Strong Russian accent: 2
+Sunderland English: 2
+Swedish: 2
+Swedish English: 19
+Swedish accent: 22
+Swiss English: 10
+Taiwanese English: 1
+Tatar English: 1
+Thai: 147
+Thai English: 42
+Third Culture Kid / South American English: 2
+Tibetan: 1
+Tibetan American: 2
+Tinged with southern accent,Midwestern United States - Chicago: 3
+Transnational englishes blend: 10
+Trinidad and Tobago: 1
+Tunisian English: 1
+Turkish: 10
+Turkish Accent: 1
+Turkmen: 1
+U.K. English: 10
+UK south coast: 1
+Ukrainian: 63
+United States English: 438566
+United States English combined with European English: 5
+United States English with slight vocal tremor and high-pitched "hoarse" voice.: 1
+United States English,A midwestern accent, specific to the St. Louis area.: 2
+United States English,According to APTIS, I've got a C1 level: 3
+United States English,American Midwest: 17
+United States English,American Midwestern: 2
+United States English,American english with austrian accent: 26
+United States English,Appalachian English: 3
+United States English,Asian-American English: 42
+United States English,Australian English: 43
+United States English,Australian English,England English,Canadian English,Filipino,Hong Kong English,India and South Asia (India, Pakistan, Sri Lanka),Irish English,Malaysian English,New Zealand English,Scottish English,Singaporean English,South Atlantic (Falkland Islands, Saint Helena),Welsh English,West Indies and Bermuda (Bahamas, Bermuda, Jamaica, Trinidad),just like us accent: 1
+United States English,Australian English,England English,Canadian English,Hong Kong English,Greek-made,gaming-english: 3
+United States English,Australian English,England English,India and South Asia (India, Pakistan, Sri Lanka),New Zealand English,international,Slovak: 10
+United States English,Australian English,England English,Irish English: 17
+United States English,Australian English,England English,Irish English,Scottish English,Welsh English: 3
+United States English,Australian English,England English,New Zealand English,Welsh English,Mixed-Accent English: 149
+United States English,Australian English,International English: 12
+United States English,Australian English,United Kingdom English: 2
+United States English,Born and lived in eastern VA for 8 years. Then lived in southern CA for 13 years.  Lived in MD, NC, WA, HI  for 1-3 years each.  Spent 30 years in Washington DC area and 17 years in Northern KY/Cincinnati OH area: 5
+United States English,Boston,Like a Kennedy: 134
+United States English,Brazilian,latin: 2
+United States English,British English: 16
+United States English,British,iowa: 1
+United States English,CARIBBEAN AND BRITISH MIXED WITH SOME NEW YORK ACCENTS: 164
+United States English,California: 5
+United States English,California English: 7
+United States English,California English,Riverside County English,Temecula English: 2
+United States English,California English,Southern US English: 27
+United States English,California,30 year old adult male: 1
+United States English,California,Transgender: 5
+United States English,California,Valley: 51
+United States English,Californian: 9
+United States English,Californian Accent: 53
+United States English,Canadian English: 493
+United States English,Canadian English,Indo-Canadian English: 3
+United States English,Canadian English,international: 13
+United States English,Canadian English,slight Brooklyn Accent: 21
+United States English,Central American: 50
+United States English,Central New York accent: 3
+United States English,Chicago: 18
+United States English,Chicago/Midwestern: 2
+United States English,Chicano English,"Valley Girl" English: 15
+United States English,Coastal Elite English: 2
+United States English,Colombia: 7
+United States English,Colorado: 3
+United States English,Cool: 19
+United States English,Danish: 1
+United States English,Deep South US: 3
+United States English,Delaware Valley, Pennsylvania: 17
+United States English,Dutch: 5
+United States English,Dutch English: 3
+United States English,East Texas,Texan: 5
+United States English,Eastern United States: 4
+United States English,England English: 3141
+United States English,England English,Brazilian Accent,EFL: 53
+United States English,England English,Canadian English: 57
+United States English,England English,English with Polish accent,Slavic English: 25
+United States English,England English,Filipino: 1
+United States English,England English,Hong Kong English: 3
+United States English,England English,India and South Asia (India, Pakistan, Sri Lanka): 68
+United States English,England English,Irish English: 14
+United States English,England English,Irish English,Scottish English: 3
+United States English,England English,Irish English,Scottish English,Danish English: 41
+United States English,England English,Israeli,Faroe islands: 2
+United States English,England English,Mid-atlantic: 46
+United States English,England English,Scottish English,West Indies and Bermuda (Bahamas, Bermuda, Jamaica, Trinidad): 24
+United States English,England English,Transatlantic English: 64
+United States English,English Second Language: 6
+United States English,Filipino: 232
+United States English,Flat midwestern: 1
+United States English,Floridian: 10
+United States English,Foreign accent: 6
+United States English,Foreigner English: 5
+United States English,Gay: 45
+United States English,German: 8
+United States English,German Accent: 6
+United States English,German,Russian: 7
+United States English,Hmong-American: 18
+United States English,Hong Kong English: 5
+United States English,Hong Kong English,Singaporean English: 4
+United States English,Hungarian English (English spoken by a Hungarian national): 3
+United States English,I have what I would call a plain old American voice. I'm from Las Vegas where local: 7
+United States English,I personally don't hear it but if present I would attribute to English being my second language,: 1
+United States English,I personally don't hear it but if present I would attribute to English being my second language, ,Spanish was my first: 1
+United States English,India and South Asia (India, Pakistan, Sri Lanka): 158
+United States English,Indiana USA,midwest america: 2
+United States English,Influenced by living in Maine and Ohio, but I actively tried to drop the Maine accent when I was young.: 4
+United States English,Irish English: 20
+United States English,Irish English,Italian: 2
+United States English,Israeli accent: 15
+United States English,Italian: 11
+United States English,Kentucky united states accent,southern usa: 4
+United States English,Kenyan English: 4
+United States English,Latin America: 10
+United States English,Latvian: 2
+United States English,Maine: 3
+United States English,Malaysian English: 14
+United States English,Mid Atlantic: 2
+United States English,Mid Atlantica ,African American Vernacular: 4
+United States English,Mid-Atlantic United States English,Philadelphia, Pennsylvania, United States English,Philadelphia Style United States English: 154
+United States English,Mid-atlantic: 31
+United States English,Mid-west United States English: 31
+United States English,Midwest American: 3
+United States English,Midwest US: 2
+United States English,Midwest US... With some Canadian slang.: 5
+United States English,Midwest USA speech blended with South Texas USA speech: 4
+United States English,Midwest United States: 8
+United States English,Midwestern: 189
+United States English,Midwestern Rural: 2
+United States English,Midwestern States (Michigan): 48
+United States English,Midwestern US English (United States): 72
+United States English,Midwestern USA: 183
+United States English,Midwestern United States English: 160
+United States English,Midwestern,African American ,Midwestern Wisconsin,Wisconsin: 5
+United States English,Midwestern,Chicago ,Gen Z: 8
+United States English,Midwestern,Low,Demure: 1452
+United States English,Midwestern,Michigan: 9
+United States English,Midwestern,Minnesotan: 357
+United States English,Midwestern,a little stuffed up: 5
+United States English,Midwestern,ohio: 3
+United States English,Minnesotan: 368
+United States English,Minnesotan English: 2
+United States English,Mix of voices: 9
+United States English,Native speaker: 20
+United States English,Neutral,Pennsylvanian: 9
+United States English,New York English: 68
+United States English,New York,italian american: 1
+United States English,New Yorker: 47
+United States English,New Zealand English: 6
+United States English,Non-native: 1
+United States English,North Indiana: 22
+United States English,Northeast US: 8
+United States English,Northern,Urban: 5
+United States English,Norwegian: 1
+United States English,Okie: 19
+United States English,Pacific North West United States: 13
+United States English,Pacific Northwest: 96
+United States English,Pacific Northwest English: 4
+United States English,Pennsylvanian: 1
+United States English,Philadelphia: 5
+United States English,Pittsburgh PA: 10
+United States English,Ponglish: 5
+United States English,Puerto Rican,Latin American English,Florida,New York,Long Island,Savannah, Georgia: 3
+United States English,Rhode Island,Massachusetts,Northeastern: 5
+United States English,Russian: 24
+United States English,Russian English Accent: 3
+United States English,Sacramento: 2
+United States English,Scandinavian: 1097
+United States English,Silicon Valley Native: 5
+United States English,Singaporean English: 13
+United States English,Slavic: 2
+United States English,Slight Dutch accent: 24
+United States English,Slight English Ring: 2
+United States English,Slight Latino accent, immigrant: 8
+United States English,Slight lisp: 103
+United States English,Slovenian: 1
+United States English,Some time spent in Scotland, mostly affecting inflection, I think: 53
+United States English,South Atlantic (Falkland Islands, Saint Helena): 1
+United States English,South Texas,Slightly effeminate,Conversational: 92
+United States English,Southern African (South Africa, Zimbabwe, Namibia): 10
+United States English,Southern Appalachian English,Southern United States English: 4
+United States English,Southern Californian: 125
+United States English,Southern Californian English: 29
+United States English,Southern New England English (Boston, Worcester, Lowell Area): 4
+United States English,Southern Ohio English: 75
+United States English,Southern Texas Accent: 4
+United States English,Southern United States English,Lightly Southern: 2
+United States English,Southern with a stutter: 3
+United States English,Southern,eastern us,Appalachia: 1
+United States English,Southwestern United States English: 262
+United States English,Spanish,Very sexy ,Very good,I sound professional: 2
+United States English,Speech impediment: 11
+United States English,Speech impediment,Rhotacism: 105
+United States English,Spoke Chinese when little,90% Pennsylvanian accent, 10% Chinese accent: 28
+United States English,Swedish: 5
+United States English,Texas: 78
+United States English,Tinged with southern accent,Midwestern United States - Chicago: 1
+United States English,Transatlantic English: 1302
+United States English,Transfemale - US English,Transgender Woman - US English: 4
+United States English,Turkish: 4
+United States English,Turkmen: 2
+United States English,US midwestern: 4
+United States English,Unite States Midwest: 278
+United States English,United States English Pacific Northwest: 5
+United States English,United States English. people say I sound like a surffer dude.: 4
+United States English,United States, west coast English: 95
+United States English,United States-West Coast-Alaska,United States-Midwestern: 2
+United States English,Upper Midwestern: 24
+United States English,Upstate New York: 69
+United States English,Variable: 5
+United States English,Washington State: 43
+United States English,West Coast: 17
+United States English,West Coast,Oregonian ,generic white guy: 5
+United States English,Western New England English: 4
+United States English,a combination of Michigan and New England: 3
+United States English,cajun: 1
+United States English,country: 1
+United States English,country,midwesterern: 5
+United States English,i have some pronunciation issues because of oral surgery and a hidden southern accent: 5
+United States English,kentucky: 3
+United States English,learnt from Spanish: 4
+United States English,little bit classy little bit sassy and add some city.....thats me: 5
+United States English,little latino,second language: 54
+United States English,mid-west with speach and mind problems from MS,Mid western with a little Southern, with speach problems related to MS.: 2
+United States English,midwest: 15
+United States English,midwest,Chicago: 2
+United States English,midwestern Missourian drawl: 2
+United States English,midwestern US: 9
+United States English,midwestern united states: 3
+United States English,new england/east coast: 21
+United States English,pin/pen merger: 5
+United States English,plain,southern draw,west coast surfer dude: 4
+United States English,portuguese: 4
+United States English,serbian: 20
+United States English,southern United States: 549
+United States English,southern United States,New Orleans dialect: 373
+United States English,southern draw: 3
+United States English,southern midwest hippie english,grateful deadhead: 8
+United States English,southern, formal, sultry: 4
+United States English,thicc southern drawl: 9
+United States English,vietnamese accent: 3
+United States English,western united states: 4
+United States English,wolof: 1
+Vietnam: 27
+Welsh English: 2104
+Welsh English,Shropshire: 5
+Welsh English,south east wales: 2
+West African: 16
+West Coast American English: 1
+West Indian: 10
+West Indies and Bermuda (Bahamas, Bermuda, Jamaica, Trinidad): 852
+West Indies and Bermuda (Bahamas, Bermuda, Jamaica, Trinidad),Patois: 5
+Western Europe: 7
+Whybare you asking: 1
+Wise Canadian English: 3
+With heavy Cantonese accent: 30
+Yoruba: 3
+Zambia: 1
+accents: 1
+american: 5
+american,Spanish: 1
+bulgarian english,non-native speaker: 3
+cajun french: 2
+chicago italian: 1
+chilean non native english: 2
+chinese accent: 2
+colombian: 2
+england,london,academic: 43
+english norwegian: 1
+european 2nd language english: 1
+flemish: 3
+fluent,European,ESL: 14
+french accent: 132
+french accent,French mid level accent: 51
+french english: 5
+french-origins english: 1
+geordie ,England Northern: 4
+hello my friend,i love you,hey you are you ok ,ho are you,yes i am: 3
+indian: 2
+indian,Neutral,slow: 3
+indonesia: 6
+international: 2
+international school,Indonesian: 3
+kenyan, and english: 2
+light french accent: 6
+mexican accent: 9
+midwestern united states: 5
+minor french accent: 37
+mix of american and british ,native polish: 5
+mixed middle eastern and european accent: 1
+mongolian: 2
+mostly American with some British and Australian inflections: 18
+nIGERIAN ENGLISH ACCENT: 1
+nigeria english: 166
+nigerian accent: 95
+non native French speaker: 1
+northen united states: 10
+northern cali: 2
+not a native speaker: 3
+not native English, originally French native language: 5
+ohio: 1
+polish: 344
+polish accent: 8
+serbian: 5
+slavic accent,Russian Accent: 1
+slightly slurred due to age and alcohol consumption.: 4
+slighty Southern affected by decades in the Midwest, 4 years in Spain and Germany, speak some German, Spanish, Polish. Have lived in nine states.: 9
+southeastern U.S. with some Mississippi, Virginia, Rhode Island, and coastal South: 19
+spanish native with a good level of proficiency in english,colombian: 7
+strong Latvian accent: 52
+telugu: 1
+ukrainian accent: 1
+urban Hibernian: 1
+very slight Russian accent,Standard American English,Boston influence: 5
+Выраженный украинский акцент: 3
+Немного русский акцент произношения, съедание слов: 5
+Русский: 3
