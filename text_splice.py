@@ -3,13 +3,10 @@ import os
 from pydub import AudioSegment
 import time
 
-# Config
-INPUT_DIR = "other_clips"
-TRANSCRIPT_FILE = "other_english_subset.txt"
-OUTPUT_DIR = "processed_audio/other_clips_words"
+
 TEMP_WAV_DIR = "temp_wavs"
 GENTLE_URL = "http://localhost:8765/transcriptions?async=false"
-MIN_WORD_DURATION = 0.5  # seconds
+MIN_WORD_DURATION = 0.2  # seconds
 
 
 def align(audio_path, transcript):
@@ -82,7 +79,11 @@ def merge_short_words(words):
 def cut_audio_segments(audio_path, segments, output_dir):
     os.makedirs(output_dir, exist_ok=True)
     audio = AudioSegment.from_wav(audio_path)
-    for i, seg in enumerate(segments):
+
+    # Omit the last word
+    for i, seg in enumerate(
+        segments[:-1]
+    ):  # <-- Ommits the last segment, cause it usally cuts off (temporary solution)
         start_ms = int(seg["start"] * 1000)
         end_ms = int(seg["end"] * 1000)
         clip = audio[start_ms:end_ms]
@@ -104,7 +105,13 @@ def preprocess_audio(path, output_path):
     return output_path
 
 
-def main(MAX_FILES=1000):
+def splice_audio_files(INPUT_DIR=None, TRANSCRIPT_FILE=None, OUTPUT_DIR=None):
+    if INPUT_DIR is None:
+        raise ValueError("INPUT_DIR must be specified")
+    if TRANSCRIPT_FILE is None:
+        raise ValueError("TRANSCRIPT_FILE must be specified")
+    if OUTPUT_DIR is None:
+        raise ValueError("OUTPUT_DIR must be specified")
     start = time.time()
     counter = 0
     transcripts = {}
@@ -117,8 +124,6 @@ def main(MAX_FILES=1000):
     os.makedirs(TEMP_WAV_DIR, exist_ok=True)
 
     for mp3_file in sorted(transcripts):
-        if counter >= MAX_FILES:
-            break
 
         transcript = transcripts[mp3_file]
         mp3_path = os.path.join(INPUT_DIR, mp3_file)
@@ -153,7 +158,7 @@ def main(MAX_FILES=1000):
 
 
 if __name__ == "__main__":
-    main(100)  # Adjust MAX_FILES as needed
+    splice_audio_files()
     # delete tempwavs dir
     if os.path.exists(TEMP_WAV_DIR):
         subprocess.run(["rm", "-rf", TEMP_WAV_DIR])

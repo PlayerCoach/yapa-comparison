@@ -34,8 +34,8 @@ def denoise_wav(path):
     # Load audio
     audio, sr = librosa.load(path, sr=None)
 
-    # Apply noise reduction
-    reduced_audio = nr.reduce_noise(y=audio, sr=sr)
+    # Apply less aggressive noise reduction
+    reduced_audio = nr.reduce_noise(y=audio, sr=sr, prop_decrease=0.5)
 
     # Save denoised audio
     sf.write(path, reduced_audio, sr)
