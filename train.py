@@ -7,14 +7,15 @@ import evaluate
 from transformers import (
     ViTForImageClassification,
     ViTImageProcessor,
-    TrainingArguments,  # type: ignore
+    TrainingArguments,  # type:ignore
     Trainer,  # type: ignore
 )
 
+
 # === CONFIG ===
 csv_path = "spectrogram_dataset.csv"
-num_epochs = 3
-batch_size = 16
+num_epochs = 5
+batch_size = 64
 model_name = "google/vit-base-patch16-224-in21k"
 
 # === LOAD DATA ===
@@ -49,7 +50,7 @@ processor = ViTImageProcessor.from_pretrained(model_name)
 
 # === PREPROCESS FUNCTION ===
 def preprocess(example):
-    image = Image.open(example["image_path"]).convert("RGB")
+    image = Image.open(example["image_path"]).convert("RGB").resize((224, 224))
     inputs = processor(images=image, return_tensors="pt")
     return {
         "pixel_values": inputs["pixel_values"][0],  # remove batch dim
@@ -85,8 +86,16 @@ args = TrainingArguments(
     per_device_train_batch_size=batch_size,
     num_train_epochs=num_epochs,
     logging_dir="./logs",
+    eval_strategy="epoch",
+    logging_strategy="steps",
+    logging_steps=10,
     save_strategy="epoch",
+    load_best_model_at_end=True,
+    save_total_limit=1,
     metric_for_best_model="accuracy",
+    greater_is_better=True,
+    report_to="tensorboard",
+    fp16=True,  # Enable mixed precision training if supported
 )
 
 # === TRAINER ===
@@ -100,5 +109,5 @@ trainer = Trainer(
 
 # === TRAIN ===
 trainer.train()
-metrics = trainer.evaluate(eval_dataset=val_dataset)  # or your validation dataset
+metrics = trainer.evaluate(eval_dataset=val_dataset)  # type: ignore
 print(metrics)

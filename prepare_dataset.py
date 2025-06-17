@@ -9,7 +9,7 @@ ACCENT_FOLDERS = [
 ]
 
 if __name__ == "__main__":
-    pick_audio(size=10, output="data/dataset", input="big_data")
+    pick_audio(size=2000, output="data/dataset", input="big_data")
     for accent in ACCENT_FOLDERS:
         input_dir = os.path.join("data/dataset", accent + "_clips")
         output_dir = os.path.join("data/dataset/processed_audio", accent)

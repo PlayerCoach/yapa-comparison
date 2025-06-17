@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-spectrogram_dir = "spectrograms"
+spectrogram_dir = "data/dataset/spectograms"
 data = []
 
 for fname in os.listdir(spectrogram_dir):
