@@ -154,14 +154,15 @@ def splice_audio_files(INPUT_DIR=None, TRANSCRIPT_FILE=None, OUTPUT_DIR=None):
         except Exception as e:
             print(f"❌ Failed to process {mp3_file}: {e}\n")
 
-    print(f"\n🕒 Done. Total time: {time.time() - start:.2f} seconds")
+        print(f"\n🕒 Done. Total time: {time.time() - start:.2f} seconds")
 
-
-if __name__ == "__main__":
-    splice_audio_files()
-    # delete tempwavs dir
     if os.path.exists(TEMP_WAV_DIR):
         subprocess.run(["rm", "-rf", TEMP_WAV_DIR])
         print(f"🗑️ Temporary directory {TEMP_WAV_DIR} deleted.")
     else:
         print(f"⚠️ Temporary directory {TEMP_WAV_DIR} does not exist.")
+
+
+if __name__ == "__main__":
+    splice_audio_files()
+    # delete tempwavs dir
