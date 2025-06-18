@@ -132,7 +132,7 @@ if __name__ == "__main__":
     )
 
 
-def pick_audio(size=10, output="data/dataset", input="big_data"):
+def pick_audio(size=1000, output="data/new_dataset", input="big_data"):
     if input == "big_data":
         DATA_PATH = BIG_DATA_PATH
     elif input == "small_data":
@@ -147,12 +147,12 @@ def pick_audio(size=10, output="data/dataset", input="big_data"):
     print("Creating dataset...")
     create_set(DATA_PATH, r"^England English$", "british", size, output)
     create_set(DATA_PATH, r"^United States English$", "american", size, output)
-    create_set(
-        DATA_PATH,
-        r"^(?!.*(england|united states|british)).*$",
-        "other",
-        size,
-        output,
-        inject_polish=True,
-    )
+    # create_set(
+    #     DATA_PATH,
+    #     r"^(?!.*(england|united states|british)).*$",
+    #     "other",
+    #     size,
+    #     output,
+    #     inject_polish=True,
+    # )
     print("Dataset created successfully.")

@@ -4,24 +4,26 @@ import librosa.display
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
+import csv
 
-processed_audio_path = "data/dataset/processed_audio"
-accent_folders = os.listdir("data/dataset/processed_audio")
-output_dir = "data/dataset/spectograms"
+# Paths
+processed_audio_path = "data/new_dataset/processed_audio"
+output_dir = "data/new_dataset/spectrograms"
 os.makedirs(output_dir, exist_ok=True)
 
-img_size = (224, 224)  # Standard ViT input size
+# Spectrogram image size for ViT
+img_size = (244, 244)
 
-data = []  # Store (image_path, label) pairs
+# Store (image_path, label) pairs
+data = []
 
 
 def create_spectrograms():
     """
-    Create mel spectrograms from audio files in the processed_audio directory.
-    Saves them as images in the spectrograms directory.
+    Converts WAV files into mel spectrograms, saves them as normalized 3-channel images,
+    and logs their paths and labels.
     """
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    accent_folders = os.listdir(processed_audio_path)
 
     for accent in accent_folders:
         accent_path = os.path.join(processed_audio_path, accent)
@@ -33,26 +35,26 @@ def create_spectrograms():
                 wav_path = os.path.join(sentence_path, fname)
                 y, sr = librosa.load(wav_path, sr=None)
 
+                # Generate mel spectrogram
                 mel = librosa.feature.melspectrogram(
                     y=y, sr=sr, n_mels=128, n_fft=512, hop_length=128
                 )
-
                 mel_db = librosa.power_to_db(mel, ref=np.max)
 
-                # Plot and save as image
+                # Plot without axes
                 fig, ax = plt.subplots()
-                librosa.display.specshow(
-                    mel_db, sr=sr, x_axis="time", y_axis="mel", ax=ax
-                )
+                librosa.display.specshow(mel_db, sr=sr, x_axis=None, y_axis=None, ax=ax)
                 ax.axis("off")
                 image_fname = f"{accent}_{sentence}_{fname.replace('.wav', '.png')}"
                 image_path = os.path.join(output_dir, image_fname)
                 plt.savefig(image_path, bbox_inches="tight", pad_inches=0)
                 plt.close(fig)
 
-                # Resize and convert to 3-channel (ViT expects RGB)
+                # Resize, convert to RGB, normalize
                 img = Image.open(image_path).convert("RGB").resize(img_size)
-                img.save(image_path)
+                img = np.array(img).astype(np.float32) / 255.0  # Normalize to [0, 1]
+                img = (img * 255).astype(np.uint8)  # Convert back for saving
+                Image.fromarray(img).save(image_path)
 
                 data.append((image_path, accent))
 

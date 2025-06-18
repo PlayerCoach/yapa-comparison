@@ -31,13 +31,8 @@ import soundfile as sf
 
 
 def denoise_wav(path):
-    # Load audio
     audio, sr = librosa.load(path, sr=None)
-
-    # Apply less aggressive noise reduction
-    reduced_audio = nr.reduce_noise(y=audio, sr=sr, prop_decrease=0.5)
-
-    # Save denoised audio
+    reduced_audio = nr.reduce_noise(y=audio, sr=sr, stationary=True, prop_decrease=0.4)
     sf.write(path, reduced_audio, sr)
 
 
@@ -45,42 +40,30 @@ from pydub import AudioSegment
 from pydub.silence import detect_nonsilent
 
 
-def trim_silence(path, silence_thresh=-40, min_silence_len=200):
+def trim_silence(path, silence_thresh=-30, min_silence_len=300):
     audio = AudioSegment.from_wav(path)
-    nonsilent_ranges = detect_nonsilent(
+    ranges = detect_nonsilent(
         audio, min_silence_len=min_silence_len, silence_thresh=silence_thresh
     )
-
-    if nonsilent_ranges:
-        start, end = nonsilent_ranges[0][0], nonsilent_ranges[-1][1]
-        trimmed_audio = audio[start:end]
-        trimmed_audio.export(path, format="wav")
+    if ranges:
+        start, end = ranges[0][0], ranges[-1][1]
+        trimmed = audio[start:end]
+        trimmed.export(path, format="wav")
 
 
 from pydub import AudioSegment
 
 
-def normalize_audio(path):
-    # Load the audio file
+def normalize_audio(path, target_dBFS=-20.0):
     audio = AudioSegment.from_wav(path)
-
-    # Normalize the audio (this will scale the volume to make the peak 0 dBFS)
-    normalized_audio = audio.apply_gain(-audio.max_dBFS)
-
-    # Create the output path by combining the desired output name with '.wav' extension
-
-    # Export the normalized audio to the output path
-    normalized_audio.export(path, format="wav")
+    change = target_dBFS - audio.dBFS
+    normalized = audio.apply_gain(change)
+    normalized.export(path, format="wav")
 
 
 def add_padding(path):
-    """
-    Adds 50ms of silence padding to the start and end of the audio file
-     if the audio is shorter than the target duration.
-    """
     audio = AudioSegment.from_wav(path)
-    current_duration = len(audio) / 1000.0  # duration in seconds
-
-    silence = AudioSegment.silent(duration=200)  # 500ms of silence
-    padded_audio = silence + audio + silence
-    padded_audio.export(path, format="wav")
+    if len(audio) < 1500:  # only pad very short clips
+        silence = AudioSegment.silent(duration=100)
+        padded = silence + audio + silence
+        padded.export(path, format="wav")

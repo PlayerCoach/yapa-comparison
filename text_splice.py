@@ -77,18 +77,53 @@ def merge_short_words(words):
 
 
 def cut_audio_segments(audio_path, segments, output_dir):
-    os.makedirs(output_dir, exist_ok=True)
     audio = AudioSegment.from_wav(audio_path)
+    total_duration = len(audio) / 1000.0
 
-    # Omit the last word
-    for i, seg in enumerate(
-        segments[:-1]
-    ):  # <-- Ommits the last segment, cause it usally cuts off (temporary solution)
+    if total_duration < 1.5:
+        return False  # Signal to skip folder creation
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    current_clip = AudioSegment.empty()
+    current_words = []
+    clip_index = 0
+
+    for seg in segments[:-1]:  # Skip the last word
         start_ms = int(seg["start"] * 1000)
         end_ms = int(seg["end"] * 1000)
-        clip = audio[start_ms:end_ms]
-        filename = f"{i:03d}_{seg['word'].replace(' ', '_')}.wav"
-        clip.export(os.path.join(output_dir, filename), format="wav")
+
+        current_clip += audio[start_ms:end_ms]
+        current_words.append(seg["word"])
+
+        if 1.5 <= current_clip.duration_seconds <= 3.0:
+            filename = f"{clip_index:03d}_{'_'.join(current_words)}.wav"
+            current_clip.export(os.path.join(output_dir, filename), format="wav")
+            current_clip = AudioSegment.empty()
+            current_words = []
+            clip_index += 1
+
+        elif current_clip.duration_seconds > 3.0:
+            # Force split if it gets too long
+            if current_clip.duration_seconds >= 1.5:
+                filename = f"{clip_index:03d}_{'_'.join(current_words)}.wav"
+                current_clip.export(os.path.join(output_dir, filename), format="wav")
+                clip_index += 1
+            current_clip = AudioSegment.empty()
+            current_words = []
+
+    # Final clip check (if any left and long enough)
+    if current_clip.duration_seconds >= 1.5:
+        filename = f"{clip_index:03d}_{'_'.join(current_words)}.wav"
+        current_clip.export(os.path.join(output_dir, filename), format="wav")
+
+    # If no valid clips created, remove dir and skip
+    if not os.listdir(output_dir):
+        os.rmdir(output_dir)
+        print(f"⚠️ Skipping {audio_path}, no valid segments")
+        return False
+
+    return True
 
 
 import subprocess
@@ -143,7 +178,10 @@ def splice_audio_files(INPUT_DIR=None, TRANSCRIPT_FILE=None, OUTPUT_DIR=None):
             result = align(wav_path, transcript)
 
             segments = merge_short_words(result["words"])
-            cut_audio_segments(wav_path, segments, output_subdir)
+            success = cut_audio_segments(wav_path, segments, output_subdir)
+            if not success:
+                print(f"⚠️ No valid segments for {mp3_file}, skipping.")
+                continue
             denoise_results(output_subdir)
             print(
                 f"✅ Processed {mp3_file} successfully. Segments saved to {output_subdir}"
