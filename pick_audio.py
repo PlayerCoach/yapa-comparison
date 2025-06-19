@@ -64,6 +64,17 @@ def create_set(data_path, accent_regex, name, size, output_dir, inject_polish=Fa
     for entry in full_list:
         if entry["client_id"] in used_clients:
             continue
+        # check if audio is of current length
+        if not os.path.exists(os.path.join(clips_path, entry["filename"])):
+            print(f"⚠️ File not found: {entry['filename']}")
+            continue
+        # check if audio is of current length
+        import soundfile as sf
+
+        info = sf.info(clips_path, entry["filename"])
+        min_samples = 512
+        if info.frames < min_samples:
+            continue
         used_clients.add(entry["client_id"])
         selected.append(entry)
         if len(selected) >= size:
@@ -147,6 +158,25 @@ def pick_audio(size=1000, output="data/new_dataset", input="big_data"):
     print("Creating dataset...")
     create_set(DATA_PATH, r"^England English$", "british", size, output)
     create_set(DATA_PATH, r"^United States English$", "american", size, output)
+    # create_set(DATA_PATH, r"^Irish English$", "irish", size, output)
+    # create_set(DATA_PATH, r"^Scottish English$", "scottish", size, output)
+    # create_set(DATA_PATH, r"^Australian English$", "australian", size, output)
+    # create_set(DATA_PATH, r"^Filipino$", "filipino", size, output)
+    # create_set(
+    #     DATA_PATH,
+    #     r"^India and South Asia \(India, Pakistan, Sri Lanka\)$",
+    #     "indian",
+    #     size,
+    #     output,
+    # )
+    # create_set(
+    #     DATA_PATH,
+    #     r"^Canadian English$",
+    #     "canadian",
+    #     size,
+    #     output,
+    # )
+
     # create_set(
     #     DATA_PATH,
     #     r"^(?!.*(england|united states|british)).*$",

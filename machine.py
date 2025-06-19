@@ -10,16 +10,17 @@ from transformers import (
     TrainingArguments,  # type: ignore
     Trainer,  # type: ignore
 )
+from transformers.trainer_callback import EarlyStoppingCallback  # type: ignore
 
 
 class Machine:
     def __init__(
         self,
         csv_path="spectrogram_dataset.csv",
-        num_epochs=5,
+        num_epochs=8,
         batch_size=64,
         model_name="google/vit-base-patch16-224-in21k",
-        learning_rate=2e-5,
+        learning_rate=5e-5,
         max_grad_norm=1.0,
         weight_decay=0.01,
     ):
@@ -77,7 +78,6 @@ class Machine:
             num_labels=len(self.label_names),
             id2label=self.id2label,
             label2id=self.label2id,
-            ignore_mismatched_sizes=True,
         )
 
         # === METRIC ===
@@ -102,7 +102,6 @@ class Machine:
             metric_for_best_model="accuracy",
             greater_is_better=True,
             report_to="tensorboard",
-            fp16=True,
             learning_rate=self.learning_rate,
             max_grad_norm=self.max_grad_norm,
             weight_decay=self.weight_decay,
@@ -117,10 +116,37 @@ class Machine:
             train_dataset=self.train_dataset,
             eval_dataset=self.val_dataset,
             compute_metrics=compute_metrics,  # type: ignore
+            callbacks=[EarlyStoppingCallback(early_stopping_patience=2)],
         )
 
     def learn(self):
         self.trainer.train()
 
     def evaluate(self):
+        from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+        import matplotlib.pyplot as plt
+
+        # Predict
+        preds = self.trainer.predict(self.val_dataset)  # type: ignore
+        y_pred = np.argmax(preds.predictions, axis=1)
+        y_true = preds.label_ids
+
+        # Confusion matrix
+        cm = confusion_matrix(y_true, y_pred)  # type: ignore
+        disp = ConfusionMatrixDisplay(
+            confusion_matrix=cm, display_labels=self.label_names
+        )
+        disp.plot(xticks_rotation=45, cmap="Blues")
+        plt.title("Confusion Matrix")
+        plt.show()
+        save_path = "confusion_matrix.png"
+        disp.figure_.savefig(save_path)
+        print(f"Confusion matrix saved to {save_path}")
         return self.trainer.evaluate()
+
+
+if __name__ == "__main__":
+    machine = Machine()
+    machine.learn()
+    results = machine.evaluate()
+    print("Evaluation results:", results)

@@ -30,3 +30,5 @@ american_clips/
 english_clips/
 
 spectrograms/
+
+.env

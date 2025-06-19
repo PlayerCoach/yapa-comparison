@@ -1,4 +1,6 @@
 from huggingface_hub import HfApi
+from dotenv_vault import load_dotenv
+import os
 
 
 def push_to_huggingface():
@@ -11,7 +13,12 @@ def push_to_huggingface():
     api = HfApi()
     api.upload_folder(
         folder_path="results",
-        repo_id="Player-Coach/YapaComparission3",
+        repo_id="Player-Coach/AccentClassification3",
         repo_type="model",
-        token="TOKEN",
+        token=os.getenv("HF_TOKEN"),
     )
+
+
+if __name__ == "__main__":
+    load_dotenv()
+    push_to_huggingface()

@@ -14,7 +14,7 @@ def convert_to_wav(path, output_path):
         "-ac",
         "1",
         "-ar",
-        "24000",
+        "16000",
         "-sample_fmt",
         "s16",
         output_path,
