@@ -40,7 +40,7 @@ from pydub import AudioSegment
 from pydub.silence import detect_nonsilent
 
 
-def trim_silence(path, silence_thresh=-30, min_silence_len=300):
+def trim_silence(path, silence_thresh=-60, min_silence_len=100):
     audio = AudioSegment.from_wav(path)
     ranges = detect_nonsilent(
         audio, min_silence_len=min_silence_len, silence_thresh=silence_thresh

@@ -10,6 +10,7 @@ def push_to_huggingface():
     # Ensure you have the correct token and repository ID
     # Replace 'TOKEN' with your actual Hugging Face token
     # Replace 'Player-Coach/YapaComparission3' with your actual repository ID
+    load_dotenv()
     api = HfApi()
     api.upload_folder(
         folder_path="results",
@@ -20,5 +21,4 @@ def push_to_huggingface():
 
 
 if __name__ == "__main__":
-    load_dotenv()
     push_to_huggingface()

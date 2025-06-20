@@ -50,6 +50,8 @@ def create_set(data_path, accent_regex, name, size, output_dir, inject_polish=Fa
                 score = entry["upvotes"] - entry["downvotes"]
                 entries.append((score, entry))
 
+    print(f"Found {len(entries)} entries for {name} accent.")
+
     entries.sort(key=lambda x: (x[0] != 0, -x[0]))
     sorted_entries = [e for _, e in entries]
 
@@ -71,8 +73,8 @@ def create_set(data_path, accent_regex, name, size, output_dir, inject_polish=Fa
         # check if audio is of current length
         import soundfile as sf
 
-        info = sf.info(clips_path, entry["filename"])
-        min_samples = 512
+        info = sf.info(os.path.join(clips_path, entry["filename"]))
+        min_samples = 1024
         if info.frames < min_samples:
             continue
         used_clients.add(entry["client_id"])
@@ -98,7 +100,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--size",
         type=int,
-        default=10,
+        default=2500,
         help="Size of each group British | American | Other, dataset is of size 3*size",
     )
     parser.add_argument(

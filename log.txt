@@ -1,0 +1,6 @@
+Using dataset: data/cv-corpus-21.0-2025-03-14/en
+Output directory: data/dataset
+Size of each group: 20000
+Found 154795 entries for british accent.
+Found 438566 entries for american accent.
+Found 1228340 entries for other accent.

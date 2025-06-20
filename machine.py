@@ -17,12 +17,12 @@ class Machine:
     def __init__(
         self,
         csv_path="spectrogram_dataset.csv",
-        num_epochs=8,
+        num_epochs=12,
         batch_size=64,
         model_name="google/vit-base-patch16-224-in21k",
-        learning_rate=5e-5,
+        learning_rate=2e-5,
         max_grad_norm=1.0,
-        weight_decay=0.01,
+        weight_decay=0.05,
     ):
         # === CONFIG ===
         self.csv_path = csv_path
@@ -116,7 +116,7 @@ class Machine:
             train_dataset=self.train_dataset,
             eval_dataset=self.val_dataset,
             compute_metrics=compute_metrics,  # type: ignore
-            callbacks=[EarlyStoppingCallback(early_stopping_patience=2)],
+            callbacks=[EarlyStoppingCallback(early_stopping_patience=4)],
         )
 
     def learn(self):

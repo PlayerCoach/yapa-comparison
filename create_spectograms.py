@@ -71,7 +71,7 @@ def create_spectrograms_secondary():
             y, sr = librosa.load(wav_path, sr=16000)  # Load audio file at 16kHz
 
             if len(y) < 512:
-                print(f"❌ Audio file {fname} is too short for mel spectrogram.")
+                # print(f"❌ Audio file {fname} is too short for mel spectrogram.")
                 continue
             # Generate mel spectrogram
             mel = librosa.feature.melspectrogram(

@@ -6,8 +6,9 @@ def preprocess_audio(path, output_path):
     from audio_utils import convert_to_wav, normalize_audio, add_padding
 
     convert_to_wav(path, output_path)
-    trim_silence(output_path)
     normalize_audio(output_path)
+    denoise_wav(output_path)
+    trim_silence(output_path)
     return output_path
 
 
@@ -32,7 +33,6 @@ def batch_process_audio(INPUT_DIR=None, OUTPUT_DIR=None):
 
             try:
                 preprocess_audio(input_path, output_path)
-                denoise_wav(output_path)
-                print(f"✅ Processed {input_path}")
+                # print(f"✅ Processed {input_path}")
             except Exception as e:
                 print(f"❌ Failed to process {input_path}: {e}")
