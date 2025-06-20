@@ -121,7 +121,9 @@ def get_next_batch(temp_tsv, index) -> bool:
 
 def main():
     batch_dir = os.path.join(OUTPUT_FOLDER_NAME, "Data_to_label")
+    dst_dir = os.path.join(OUTPUT_FOLDER_NAME, "Filtered")
     os.makedirs(batch_dir, exist_ok=True)
+    os.makedirs(dst_dir)
 
     temp_tsv = filter_and_sort_tsv()
     index = 0
@@ -139,7 +141,7 @@ def main():
             for f in approved_files:
                 shutil.move(
                     os.path.join(batch_dir, f),
-                    os.path.join(OUTPUT_FOLDER_NAME, f),
+                    os.path.join(dst_dir, f),
                 )
 
             with open(temp_tsv, "r", encoding="utf-8") as f_in, open(
@@ -149,7 +151,7 @@ def main():
                     if line.split("\t")[0] in approved_files:
                         f_out.write(line)
 
-            if count_files(OUTPUT_FOLDER_NAME) >= SIZE:
+            if count_files(dst_dir) >= SIZE:
                 break
 
             EOF = get_next_batch(temp_tsv, index)
