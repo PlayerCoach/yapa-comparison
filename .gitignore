@@ -32,3 +32,5 @@ english_clips/
 spectrograms/
 
 .env
+
+spectrogram_dataset.csv

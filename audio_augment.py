@@ -57,5 +57,5 @@ def augment_audio_files(directory):
 
 if __name__ == "__main__":
     # Specify the directory containing audio files
-    audio_directory = "data/new_dataset/processed_audio/british"
+    audio_directory = "data/new_dataset/processed_audio/american"
     augment_audio_files(audio_directory)

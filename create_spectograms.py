@@ -18,6 +18,18 @@ img_size = (244, 244)
 data = []
 
 
+def check_if_spectrograms_exist(wav_name: str) -> bool:
+    """
+    Check if the spectrograms CSV file already exists.
+    If it exits, then do nothing, it is in the correct folder
+    """
+
+    if os.path.exists(os.path.join(output_dir, wav_name)):
+        return True
+    else:
+        return False
+
+
 def create_spectrograms():
     """
     Converts WAV files into mel spectrograms, saves them as normalized 3-channel images,
@@ -32,6 +44,13 @@ def create_spectrograms():
             for fname in os.listdir(sentence_path):
                 if not fname.endswith(".wav"):
                     continue
+                if check_if_spectrograms_exist(
+                    accent + "_" + sentence + "_" + fname.replace(".wav", ".png")
+                ):
+                    print(
+                        f"Spectrogram for {accent}_{sentence}_{fname} already exists, skipping."
+                    )
+                    continue
                 wav_path = os.path.join(sentence_path, fname)
                 y, sr = librosa.load(wav_path, sr=16000)  # Load audio file at 24kHz
 
@@ -39,7 +58,7 @@ def create_spectrograms():
                 mel = librosa.feature.melspectrogram(
                     y=y, sr=sr, n_mels=128, n_fft=512, hop_length=128
                 )
-                mel_db = librosa.power_to_db(mel, ref=np.max)
+                mel_db = librosa.power_to_db(mel, ref=np.max(mel))
 
                 # Plot without axes
                 fig, ax = plt.subplots()
@@ -66,6 +85,11 @@ def create_spectrograms_secondary():
         accent_path = os.path.join(processed_audio_path, accent)
         for fname in os.listdir(accent_path):
             if not fname.endswith(".wav"):
+                continue
+            if check_if_spectrograms_exist(
+                accent + "_" + fname.replace(".wav", ".png")
+            ):
+                print(f"Spectrogram for {accent}_{fname} already exists, skipping.")
                 continue
             wav_path = os.path.join(accent_path, fname)
             y, sr = librosa.load(wav_path, sr=16000)  # Load audio file at 16kHz
