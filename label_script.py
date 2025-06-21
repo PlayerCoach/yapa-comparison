@@ -60,7 +60,17 @@ def filter_and_sort_tsv(tsv_path=CSV_PATH, clips_path=AUDIO_DIR, min_frames=1024
             downvotes = int(parts[6]) if parts[6].isdigit() else 0
             score = upvotes - downvotes
 
-            regex = re.compile(rf"^{re.escape(ACCENT_LABEL)}$", re.IGNORECASE)
+            if (
+                ACCENT_LABEL == "Slavic"
+            ):  # Special Case for slavic langagues, may delete later
+                regex = re.compile(
+                    r"\b(Slavic|Polish|Czech|Russian|Ukrainian|Bulgarian| \
+                                Croatian|Slovak|Slovenian|Serbian|Latvian|Lithuanian| \
+                                Hungarian|Romanian|Kazakh|Azerbaijani|Georgian|Moldovan)\b",
+                    re.IGNORECASE,
+                )
+            else:
+                regex = re.compile(rf"^{re.escape(ACCENT_LABEL)}$", re.IGNORECASE)
 
             if client_id in used_clients:
                 continue
@@ -194,6 +204,7 @@ if __name__ == "__main__":
         "Scottish English",
         "United States English",
         "Filipino",
+        "Slavic",  # Special case
     ]
 
     if args.accent:

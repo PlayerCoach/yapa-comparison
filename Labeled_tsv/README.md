@@ -1,0 +1,2 @@
+This folder contains .tsv files with labeled audio for each accent, the tsv file contains the file name with its transcription.
+Note that the audio was not professionaly labled, we discarted bad audio qualtity and obvious accent falsification.
