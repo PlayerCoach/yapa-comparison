@@ -36,6 +36,15 @@ spectrograms/
 
 spectrogram_dataset.csv
 
-United_dataset/
+American_dataset/
 
 England_dataset/
+
+Irish_dataset/
+
+Scottish_dataset/
+
+Filipino_dataset/
+Australian_dataset/
+Canadian_dataset/
+India_dataset/

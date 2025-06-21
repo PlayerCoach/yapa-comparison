@@ -34,13 +34,23 @@ def count_unique_speakers():
         "Scottish English",
         "United States English",
         "Filipino",
-        # You can add more here
+        "Slavic",  # This is for my special use, you can delete it if you want
+        # Add more here
     ]
 
     tsv_path = os.path.join("data/cv-corpus-21.0-2025-03-14/en", TSV_FILE)
 
     for accent in ACCENTS:
-        regex = re.compile(rf"^{re.escape(accent)}$", re.IGNORECASE)
+        # If you don't want to count slavic counteries you can delete this if/else
+        if accent == "Slavic":
+            regex = re.compile(
+                r"\b(Slavic|Polish|Czech|Russian|Ukrainian|Bulgarian| \
+                               Croatian|Slovak|Slovenian|Serbian|Latvian|Lithuanian| \
+                               Hungarian|Romanian|Kazakh|Azerbaijani|Georgian|Moldovan)\b",
+                re.IGNORECASE,
+            )
+        else:
+            regex = re.compile(rf"^{re.escape(accent)}$")
 
         seen_speakers = set()
         counter = 0

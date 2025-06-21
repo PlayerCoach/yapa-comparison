@@ -17,10 +17,10 @@ class Machine:
     def __init__(
         self,
         csv_path="spectrogram_dataset.csv",
-        num_epochs=12,
+        num_epochs=5,
         batch_size=64,
         model_name="google/vit-base-patch16-224-in21k",
-        learning_rate=2e-5,
+        learning_rate=2e-4,
         max_grad_norm=1.0,
         weight_decay=0.05,
     ):
