@@ -40,9 +40,13 @@ class Machine:
         self.id2label = {i: name for name, i in self.label2id.items()}
         df["label_id"] = df["label"].map(self.label2id)
 
-        train_df, val_df = train_test_split(
-            df, test_size=0.2, stratify=df["label"], random_state=42
+        train_df = (
+            df[df["split"] == "train"].drop(columns=["split"]).reset_index(drop=True)
         )
+        val_df = (
+            df[df["split"] == "test"].drop(columns=["split"]).reset_index(drop=True)
+        )
+
         features = Features(
             {
                 "image_path": Value("string"),

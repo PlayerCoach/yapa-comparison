@@ -6,7 +6,7 @@ from pathlib import Path
 
 sampling_rate = 16000
 INPUT_DIR = "data/dataset/processed"
-DESIRED_SET_COUNT = 800
+DESIRED_SET_COUNT = 1600  # total across train+test
 
 
 def add_noise(audio, noise_level=0.005):
@@ -35,9 +35,6 @@ def get_audio_files(directory):
 
 
 def augment_recursive(accent_dir, initial_count, desired_count):
-    """
-    Augments files in steps, creating new subfolders for each augmentation round.
-    """
     round_idx = 1
     current_total = initial_count
     base_path = Path(accent_dir)
@@ -68,22 +65,25 @@ def augment_recursive(accent_dir, initial_count, desired_count):
                 current_total += 1
 
         round_idx += 1
-        round_input = round_output  # Next round uses previous augmentations
+        round_input = round_output
 
 
 def get_accent_counts(input_root):
-    """
-    Returns dict of accent name -> number of wav files (including in augmented folders)
-    """
     counts = dict()
-    for accent in os.listdir(input_root):
-        accent_path = os.path.join(input_root, accent)
-        if not os.path.isdir(accent_path):
-            continue
+    accents = set(os.listdir(os.path.join(input_root, "train"))) | set(
+        os.listdir(os.path.join(input_root, "test"))
+    )
+    for accent in accents:
+        train_path = os.path.join(input_root, "train", accent)
+        test_path = os.path.join(input_root, "test", accent)
 
         total_count = 0
-        for root, _, files in os.walk(accent_path):
-            total_count += len([f for f in files if f.endswith(".wav")])
+        for root in [train_path, test_path]:
+            if not os.path.exists(root):
+                continue
+            for subdir, _, files in os.walk(root):
+                total_count += len([f for f in files if f.endswith(".wav")])
+
         counts[accent] = total_count
     return counts
 
@@ -92,14 +92,21 @@ if __name__ == "__main__":
     accent_counts = get_accent_counts(INPUT_DIR)
 
     for accent, count in accent_counts.items():
-        accent_path = os.path.join(INPUT_DIR, accent)
-        if not os.path.isdir(accent_path):
+        if count >= DESIRED_SET_COUNT:
+            print(f"Accent '{accent}' already has {count} samples.")
             continue
 
-        if count < DESIRED_SET_COUNT:
-            print(
-                f"Augmenting accent '{accent}' from {count} to {DESIRED_SET_COUNT}..."
-            )
-            augment_recursive(accent_path, count, DESIRED_SET_COUNT)
-        else:
-            print(f"Accent '{accent}' already has {count} samples.")
+        print(f"Augmenting accent '{accent}' from {count} to {DESIRED_SET_COUNT}...")
+
+        target_train = int(DESIRED_SET_COUNT * 0.8)
+        target_test = DESIRED_SET_COUNT - target_train
+
+        for subset, target in [("train", target_train), ("test", target_test)]:
+            subset_path = os.path.join(INPUT_DIR, subset, accent)
+            if not os.path.exists(subset_path):
+                os.makedirs(subset_path)
+            current = 0
+            for _, _, files in os.walk(subset_path):
+                current += len([f for f in files if f.endswith(".wav")])
+            if current < target:
+                augment_recursive(subset_path, current, target)
