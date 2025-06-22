@@ -18,21 +18,43 @@ def batch_process_audio(INPUT_DIR=None, OUTPUT_DIR=None):
     if OUTPUT_DIR is None:
         raise ValueError("OUTPUT_DIR must be specified")
 
-    for root, _, files in os.walk(INPUT_DIR):
-        for file in sorted(files):
+    for accent in os.listdir(INPUT_DIR):
+        accent_path = os.path.join(INPUT_DIR, accent)
+        if not os.path.isdir(accent_path):
+            continue  # skip files in INPUT_DIR if any
+
+        for file in sorted(os.listdir(accent_path)):
             if not file.endswith(".mp3"):
                 continue
 
-            rel_dir = os.path.relpath(root, INPUT_DIR)
-            out_dir = os.path.join(OUTPUT_DIR, rel_dir)
+            input_path = os.path.join(accent_path, file)
+            out_dir = os.path.join(OUTPUT_DIR, accent)
             os.makedirs(out_dir, exist_ok=True)
-
-            input_path = os.path.join(root, file)
             base = os.path.splitext(file)[0]
             output_path = os.path.join(out_dir, base + ".wav")
 
             try:
                 preprocess_audio(input_path, output_path)
-                # print(f"✅ Processed {input_path}")
             except Exception as e:
                 print(f"❌ Failed to process {input_path}: {e}")
+
+
+if __name__ == "__main__":
+
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--in_dir",
+        type=str,
+        default="data/dataset",
+        help="Input folder where you have folders with labeled accents",
+    )
+    parser.add_argument(
+        "--out_dir",
+        type=str,
+        default="data/dataset/processed",
+        help="Output folder where the processes audio files will be stored",
+    )
+    args = parser.parse_args()
+    batch_process_audio(args.in_dir, args.out_dir)
