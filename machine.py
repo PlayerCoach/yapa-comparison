@@ -17,7 +17,7 @@ class Machine:
     def __init__(
         self,
         csv_path="spectrogram_dataset.csv",
-        num_epochs=5,
+        num_epochs=20,
         batch_size=64,
         model_name="google/vit-base-patch16-224-in21k",
         learning_rate=2e-4,
@@ -107,6 +107,7 @@ class Machine:
             weight_decay=self.weight_decay,
             warmup_ratio=0.05,
             logging_dir="./logs",
+            lr_scheduler_type="cosine",
         )
 
         # === TRAINER ===

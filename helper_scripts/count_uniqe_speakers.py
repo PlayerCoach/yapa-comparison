@@ -3,8 +3,9 @@ import os
 import re
 import shutil
 
-BIG_DATA_PATH = "data/cv-corpus-21.0-2025-03-14/en"
-SMALL_DATA_PATH = "data/cv-corpus-20.0-delta-2024-12-06/en"
+BIG_DATA_PATH = "../data/cv-corpus-21.0-2025-03-14/en"
+SMALL_DATA_PATH = "../data/cv-corpus-20.0-delta-2024-12-06/en"
+TEST_DATA_PATH = "../data/cv-corpus-10.0-delta-2022-07-04/en"
 
 TSV_FILE = "validated.tsv"
 CLIPS_DIR = "clips"
@@ -38,7 +39,7 @@ def count_unique_speakers():
         # Add more here
     ]
 
-    tsv_path = os.path.join("data/cv-corpus-21.0-2025-03-14/en", TSV_FILE)
+    tsv_path = os.path.join(TEST_DATA_PATH, TSV_FILE)
 
     for accent in ACCENTS:
         # If you don't want to count slavic counteries you can delete this if/else
